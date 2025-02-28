@@ -56,6 +56,7 @@
       margin: 0;
       padding: 1rem;
       border-right: var(--border-thickness) solid var(--text-color);
+      position: relative;
 
       &:last-child {
         border-right: 0;
