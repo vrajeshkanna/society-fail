@@ -84,6 +84,7 @@ export function harvestCrop(row, col) {
       ? Math.floor(CROP_TYPES[plot.type].yield * 1.5)
       : CROP_TYPES[plot.type].yield;
     gameState.food += cropYield;
+    gameState.totalCropsHarvested = (gameState.totalCropsHarvested || 0) + 1;
     gameState.farming.grid[row][col] = null;
     addLogEntry(`Harvested ${plot.type} at row ${row + 1}, column ${col + 1}, yielding ${cropYield} food.`);
     updateFarmingUI();
